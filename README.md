@@ -1,24 +1,43 @@
-# README
+## Time Tracking Challenge
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+=======
 
-Things you may want to cover:
+**Time Tracking Challenge** é uma aplicação feita para resolver 
 
-* Ruby version
 
-* System dependencies
+## Setup do Projeto
 
-* Configuration
+### 
+Pré requisitos
 
-* Database creation
+ - Ter [Ruby](https://www.ruby-lang.org) versão 2.5.1 previamente instalado na máquina
 
-* Database initialization
 
-* How to run the test suite
+### Configurando e executando testes
 
-* Services (job queues, cache servers, search engines, etc.)
+ - `bin/setup`
+ - `bundle exec rspec`
 
-* Deployment instructions
+#### Docker
+ - `docker-compose build`
+ - `docker-compose run --rm app bin/setup`
+ - `docker-compose run --rm --service-ports app bash`
+ - `bundle exec rspec`
 
-* ...
+### Executando a aplicação
+
+Após os passos de configuração executar o comando `rails server` e acessar pela
+url [http://localhost:3000/](http://localhost:3000/).
+
+#### Docker
+
+ - `docker-compose build`
+ - `docker-compose run --rm app bin/setup`
+ - `docker-compose run --rm app rails assets:precompile`
+ - `docker-compose up`
+ - `docker exec -it timetracking bash`
+
+
+### Principais contribuidores
+ 
+[angelorange](https://github.com/angelorange)
