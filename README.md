@@ -33,10 +33,10 @@ url [http://localhost:3000/](http://localhost:3000/).
 
  - `docker-compose build`
  - `docker-compose run --rm app bin/setup`
+ - `docker-compose run --rm app bundle install`
  - `docker-compose run --rm app rails assets:precompile`
  - `docker-compose up`
  - `docker exec -it timetracking bash`
-
 
 ### Principais contribuidores
  
