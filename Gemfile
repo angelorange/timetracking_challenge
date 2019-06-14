@@ -47,6 +47,12 @@ group :development, :test do
   gem 'capybara'
   gem 'simplecov', require: false, group: :test
   gem 'rubocop-rails'
+  gem 'factory_bot_rails'
+end
+
+group :test do
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+  gem 'shoulda-matchers'
 end
 
 group :development do
