@@ -51,7 +51,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+  gem 'faker'
   gem 'shoulda-matchers'
 end
 
