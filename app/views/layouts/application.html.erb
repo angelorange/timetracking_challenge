@@ -10,9 +10,11 @@
   </head>
 
   <body>
-    <%= render 'shared/messages' %>
     <div class="container-fluid">
-      <%= yield %>
+      <%= render 'shared/messages' %>
+      <div class="container">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

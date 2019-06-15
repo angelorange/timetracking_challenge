@@ -1,11 +1,7 @@
-Geofencing create successfully
-
-<%= @geofencing.location %>
-
-<%= @geofencing.latitude %>
-
-<%= @geofencing.longitude %>
-
-<%= @geofencing.radius %>
-
-
+<ul>
+  <li><%= @geofencing.location %></li>
+  <li><%= @geofencing.latitude %></li>
+  <li><%= @geofencing.longitude %></li>
+  <li><%= @geofencing.radius %></li>
+</ul>
+<%= link_to 'Delete', geofencing_path(@geofencing), method: :delete, class: 'btn btn-danger'%>

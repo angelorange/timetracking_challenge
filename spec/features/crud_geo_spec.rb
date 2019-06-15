@@ -9,7 +9,7 @@ feature 'create a geofencing' do
     fill_in 'Latitude', with: geo.latitude
     fill_in 'Longitude', with: geo.longitude
     fill_in 'Radius', with: geo.radius
-    click_on 'Create'
+    click_on 'Submit'
 
     expect(page).to have_content('Geofencing create successfully')
     expect(page).to have_content(geo.location)
@@ -21,17 +21,18 @@ feature 'create a geofencing' do
   scenario 'and try to create with missing data' do
     visit new_geofencing_path
     fill_in 'Location', with: ' '
-    click_on 'Create'
+    click_on 'Submit'
 
     expect(page).to have_content("Location can't be blank")
   end
 
-  scenario 'and update date' do
+  scenario 'and UPDATE date' do
     geo = create(:geofencing)
     neogeo = build(:geofencing, location: 'Paulista')
 
-    visit new_geofencing_path
+    visit edit_geofencing_path(geo.id)
     fill_in 'Location', with: neogeo.location
+    click_on 'Submit'
 
     expect(page).to have_content('Geofecing update successfully')
     expect(page).to have_content('Paulista')
@@ -40,11 +41,10 @@ feature 'create a geofencing' do
     expect(page).to have_content(geo.radius)
   end
 
-  scenario 'delete the data from db' do
+  scenario 'and DELETE the data from db' do
     geo = create(:geofencing)
 
-    visit geofencing_path
-    click_on geo.location
+    visit geofencing_path(geo.id)
     click_on 'Delete'
 
     expect(page).to have_content('Deleted')
