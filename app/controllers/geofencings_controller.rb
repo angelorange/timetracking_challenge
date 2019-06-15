@@ -5,8 +5,12 @@ class GeofencingsController < ApplicationController
 
   def create
     @geofencing = Geofencing.new(geofencings_params)
-    @geofencing.save
-    redirect_to @geofencing
+    if @geofencing.save
+      flash[:success] =  'Geofencing create successfully'
+      redirect_to @geofencing
+    else
+      render :new
+    end
   end
 
   def show
