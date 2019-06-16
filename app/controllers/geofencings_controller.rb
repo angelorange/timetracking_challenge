@@ -33,6 +33,7 @@ class GeofencingsController < ApplicationController
     flash[:danger] = 'Deleted'
     redirect_to new_geofencing_path
   end
+
   private
 
   def geofencings_params
