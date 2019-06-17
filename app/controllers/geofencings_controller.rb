@@ -1,6 +1,10 @@
 class GeofencingsController < ApplicationController
   before_action :set_geofencing, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @geofencings = Geofencing.all
+  end
+
   def new
     @geofencing = Geofencing.new
   end

@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Location</th>
+      <th scope="col">Latitude</th>
+      <th scope="col">Longitude</th>
+      <th scope="col">Radius</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @geofencings.each do |geofencing| %>
+      <tr>
+        <th><%= link_to geofencing.location, geofencing_path(geofencing) %></th>
+        <td><%= geofencing.latitude %></td>
+        <td><%= geofencing.longitude %></td>
+        <td><%= geofencing.radius %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
