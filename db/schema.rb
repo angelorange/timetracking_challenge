@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_14_030048) do
+ActiveRecord::Schema.define(version: 2019_06_17_162015) do
 
   create_table "geofencings", force: :cascade do |t|
     t.string "location"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 2019_06_14_030048) do
     t.integer "radius"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "time_trackings", force: :cascade do |t|
+    t.string "comment"
+    t.string "owner"
+    t.integer "geofencing_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["geofencing_id"], name: "index_time_trackings_on_geofencing_id"
   end
 
 end

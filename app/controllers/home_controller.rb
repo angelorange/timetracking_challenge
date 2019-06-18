@@ -1,3 +1,3 @@
-class HomeController < GeofencingsController
+class HomeController < ApplicationController
   def index; end
 end
