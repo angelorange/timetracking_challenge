@@ -2,18 +2,18 @@
 
 =======
 
-**Time Tracking Challenge** é uma aplicação feita para resolver 
+**Time Tracking Challenge** It's a application made to pass on a challenge. It basically, consists in a Electronic Time Clock, where individual registers the places that he wishes to allow to check in. For after, to do the check in with his name/identification and comments.
 
 
-## Setup do Projeto
+## Project Setup
 
 ### 
-Pré requisitos
+pre requisites:
 
- - Ter [Ruby](https://www.ruby-lang.org) versão 2.5.1 previamente instalado na máquina
+ - To have [Ruby](https://www.ruby-lang.org) version 2.5.1 previously installed.
 
 
-### Configurando e executando testes
+### Configuring e executing tests
 
  - `bin/setup`
  - `bundle exec rspec`
@@ -24,9 +24,9 @@ Pré requisitos
  - `docker-compose run --rm --service-ports app bash`
  - `bundle exec rspec`
 
-### Executando a aplicação
+### Executing the aplication
 
-Após os passos de configuração executar o comando `rails server` e acessar pela
+After the steps of configuration, execute the comand `rails server` and access from
 url [http://localhost:3000/](http://localhost:3000/).
 
 #### Docker
@@ -38,6 +38,6 @@ url [http://localhost:3000/](http://localhost:3000/).
  - `docker-compose up`
  - `docker exec -it timetracking bash`
 
-### Principais contribuidores
- 
+### Main Contributors
+
 [angelorange](https://github.com/angelorange)
