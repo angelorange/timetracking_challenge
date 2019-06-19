@@ -23,6 +23,14 @@
         </div>
       </div>
 
+    <div class="form-group">
+        <div class="row">
+          <div class="col-sm-offset-2 col-sm-8">
+            <%= f.collection_select :geofencing_id, Geofencing.all, :id, :location, prompt: true, class: "form-control status" %>
+          </div>
+        </div>
+      </div>
+
       <div class='form-group'>
         <div class='col-sm-offset-2 col-sm-10'>
           <%= f.submit "Submit", class:'btn btn-primary btn-lg' %>

@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :time_tracking do
-    comment { "Uns blablabla loucos" }
-    owner { "Sr.Bot" }
+    comment { Faker::Lorem.sentence(3) }
+    owner { Faker::Name.name }
     geofencing
   end
 end

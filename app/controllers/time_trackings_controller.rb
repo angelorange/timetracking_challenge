@@ -3,7 +3,7 @@ class TimeTrackingsController < ApplicationController
   def index
     @time_trackings = TimeTracking.all
   end
-  
+
   def show; end
 
   def new
@@ -23,7 +23,7 @@ class TimeTrackingsController < ApplicationController
   private
 
   def time_tracking_params
-    params.require(:time_tracking).permit(:owner, :comments, :geofencing_id)
+    params.require(:time_tracking).permit(:owner, :comment, :geofencing_id)
   end
 
   def set_time_tracking
