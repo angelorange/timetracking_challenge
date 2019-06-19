@@ -6,19 +6,27 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        
+
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Geofencing
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%= link_to 'Index', geofencings_path, class: "dropdown-item" %> 
-          <%= link_to 'Create', new_geofencing_path, class: "dropdown-item" %>  
+          <%= link_to 'Create', new_geofencing_path, class: "dropdown-item" %>
         </div>
       </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Timetracking
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to 'Index', time_trackings_path, class: "dropdown-item" %> 
+          <%= link_to 'Create', new_time_tracking_path, class: "dropdown-item" %>
+        </div>
+      </li>
+
       </li>
     </ul>
   </div>
