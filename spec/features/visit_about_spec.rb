@@ -5,6 +5,6 @@ feature 'visit about' do
     visit root_path
     click_on 'About the project'
 
-    expect(page).to have_content('https://github.com/angelorange')
+    expect(page).to have_current_path(about_path)
   end
 end
