@@ -23,7 +23,10 @@ function updateClock ( )
   var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
 
   // Update the time display
-  document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+  $('#clock:first-child').html(currentTimeString);
 }
 
-console.log('teste')
+$(document).ready(function() {
+  updateClock(); 
+  setInterval('updateClock()', 1000 );
+});
